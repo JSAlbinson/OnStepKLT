@@ -5,9 +5,12 @@ This is a fork of the OnStep system for the Keele University Observatory Thornto
 
 There are three additions to be made:
 
-When "slew" or "9" or "max" or anything equivalent is selected on the SHC, or the main control screen on the PC, the slew/track pin is selected HIGH and the appropriate slew motor/direction pin is made HIGH. The clutch select pin splits into a direct connect to the slew clutch, and also a connection through a logic inverter to the track clutch. This means when slew is deselected, track is selected. When system power is on, the track clutch is selected by default. Slew is only selected when needed. Only when the button on the handset or the virtual h/s is released does the slew stop. The inbuilt software limits on telescope position must be honoured.
-When a 'goto' of more than 1 degree is requested by whatever means, from the SHC or the main screen, the slew clutch and appropriate slew motor must be selected for an integer number of 10 milliseconds. This is a half cycle of 50Hz mains. We are using zero point crossing mains relays to switch the slew motors to minimise transients. The clutch relays (24V DC) must also be activated for the exact same time.
-The safety brake must be energised on power on, but only as the track/slew clutch is also activated. If the soft panic stop is pressed, the safety brake must also be energised off. As this brake is actually a permanent magnet, on power off it clamps the whole telescope in RA, preventing an out-of-balance runaway.
+1) When "slew" or "9" or "max" or anything equivalent is selected on the SHC, or the main control screen on the PC, the slew/track pin is selected HIGH and the appropriate slew motor/direction pin is made HIGH. The clutch select pin splits into a direct connect to the slew clutch, and also a connection through a logic inverter to the track clutch. This means when slew is deselected, track is selected. When system power is on, the track clutch is selected by default. Slew is only selected when needed. Only when the button on the handset or the virtual h/s is released does the slew stop. The inbuilt software limits on telescope position must be honoured.
+
+2) When a 'goto' of more than 1 degree is requested by whatever means, from the SHC or the main screen, the slew clutch and appropriate slew motor must be selected for an integer number of 10 milliseconds. This is a half cycle of 50Hz mains. We are using zero point crossing mains relays to switch the slew motors to minimise transients. The clutch relays (24V DC) must also be activated for the exact same time.
+
+3) The safety brake must be energised on power on, but only as the track/slew clutch is also activated. If the soft panic stop is pressed, the safety brake must also be energised off. As this brake is actually a permanent magnet, on power off it clamps the whole telescope in RA, preventing an out-of-balance runaway.
+
 All else is to be left intact as we actually use the functionality.
 
 
