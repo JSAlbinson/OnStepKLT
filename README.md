@@ -1,7 +1,7 @@
 OnStep Telescope Controller
 ===========================
 
-This is a fork of the OnStep system for the Keele University Observatory Thornton 24in Telescope. It is specific to this telescope and is unlikely to be of interest to other telescope nuts except as an interesting oddity. This repository is private for the time being as I and a few colleagues work on it. When it is fit to be seen it will be made public. The telescope has 5 motors: 3 large steppers (2 x Nema 34, plus 1x large Nema 23) and 2 3phase mains induction motors wired as reversible single phase motors. It has a clutch system to switch between slew and track on RA, and a safety brake system to hold the telescope safe in power down mode. The object of this exercise is to insert some code wedges to cater for the slew situations, and leave the rest of the code base alone. The telescope is a German Equatorial Mount (GEM), weighing 2 tons total, with a half ton counterweight and half ton telescope frame at a moment arm of 1 metre. The optics are a 603mm f4.45 Newtonian system feeding (currently) a QSI 583 CCD camera.
+This is a fork of the OnStep system for the Keele University Observatory Thornton 24in Telescope. It is specific to this telescope and is unlikely to be of interest to other telescope nuts except as an interesting oddity. Now made public to allow inspection by colleagues. The telescope has 5 motors: 3 large steppers (2 x Nema 34, plus 1x large Nema 23) and 2 3phase mains induction motors wired as reversible single phase motors. It has a clutch system to switch between slew and track on RA, and a safety brake system to hold the telescope safe in power down mode. The object of this exercise is to insert some code wedges to cater for the slew situations, and leave the rest of the code base alone. The telescope is a German Equatorial Mount (GEM), weighing 2 tons total, with a half ton counterweight and half ton telescope frame at a moment arm of 1 metre. The optics are a 603mm f4.45 Newtonian system feeding (currently) a QSI 583 CCD camera.
 
 There are three additions to be made:
 
@@ -12,6 +12,9 @@ There are three additions to be made:
 3) The safety brake must be energised on power on, but only as the track/slew clutch is also activated. If the soft panic stop is pressed, the safety brake must also be energised off. As this brake is actually a permanent magnet, on power off it clamps the whole telescope in RA, preventing an out-of-balance runaway.
 
 All else is to be left intact as we actually use the functionality.
+
+
+Below this line is original OnStep......................
 
 
 # Important Note
